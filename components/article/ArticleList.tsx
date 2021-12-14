@@ -3,8 +3,9 @@ import React from 'react';
 import useSWR from 'swr';
 
 import ArticlePreview from './ArticlePreview';
+import { SERVER_BASE_URL } from '../../lib/utils/constant';
 
-const SERVER_BASE_URL = `https://conduit.productionready.io/api`;
+// const SERVER_BASE_URL = `https://conduit.productionready.io/api`;
 
 // declare function fetch(input: RequestInfo, init?: RequestInit): Promise<Response>;
 // const fetcher = (...args) => fetch(...args).then((res) => res.json());
