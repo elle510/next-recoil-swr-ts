@@ -1,8 +1,10 @@
 import React from 'react';
 
 import axios from 'axios';
+// import marked from 'marked';
 
 import { SERVER_BASE_URL } from '../../lib/utils/constant';
+import CommentContainer from '../../components/comment/CommentContainer';
 
 type ArticlePageProps = {
   article: any;
@@ -15,14 +17,56 @@ const ArticlePage: React.FC<ArticlePageProps> = ({ article, pid }) => {
   // 두번째 요청부터는 이미 정적생성된 페이지 사용, ssr은 요청시 마다 페이지 생성해서 사용 (이게 차이!!)
   if (!article) return <div>Loading...</div>;
 
-  const { title, description, body } = article;
+  const { title, tagList, description, body } = article;
 
+  // TODO: 타입 에러남 (원인 찾자)
+  // const markup = {
+  //   __html: marked(body, { sanitize: true }),
+  // };
+
+  console.log('pid', pid);
   return (
-    <div>
-      <h1>{title}</h1>
-      <p>{description}</p>
-      <div>{body}</div>
-      <div>pid: {pid}</div>
+    <div className="article-page">
+      <div className="banner">
+        <div className="container">
+          <h1>{title}</h1>
+          <p>{description}</p>
+          {/* <ArticleMeta article={article} canModify={canModify} /> */}
+        </div>
+      </div>
+
+      <div className="container page">
+        <div className="row article-content">
+          <div className="col-xs-12">
+            {/* <div dangerouslySetInnerHTML={markup} /> */}
+            <div>{body}</div>
+
+            <ul className="tag-list">
+              {tagList.map((tag: any) => {
+                return (
+                  <li className="tag-default tag-pill tag-outline" key={tag}>
+                    {tag}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+
+        <hr />
+
+        <div className="article-actions" />
+
+        <div className="row">
+          <CommentContainer
+            pid={pid}
+            // comments={this.props.comments || []}
+            // errors={this.props.commentErrors}
+            // slug={this.props.match.params.id}
+            // currentUser={this.props.currentUser}
+          />
+        </div>
+      </div>
     </div>
   );
 };
