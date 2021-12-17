@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 // import Link from 'next/link';
 
-import LoginForm from '../components/LoginForm';
+import LoginForm from '../../components/LoginForm';
 
 const Login = () => (
   <>
