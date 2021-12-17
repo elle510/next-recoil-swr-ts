@@ -35,7 +35,7 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }: any) => {
-  console.log('params', params);
+  // console.log('params', params);
   const { pid } = params;
 
   try {

@@ -1,41 +1,74 @@
-/* Layout */
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+/* Home (index) 페이지 */
+.home-page {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
 }
 
-.main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+.home-page .article-list {
+  padding-right: 15px;
+  padding-left: 15px;
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.home-page .sidebar {
+  padding-right: 15px;
+  padding-left: 15px;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+/* LoginForm */
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #55595c;
+  background-color: #fff;
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 0.25rem;
+}
+
+.form-control-lg, .input-group-lg>.form-control, .input-group-lg>.input-group-addon, .input-group-lg>.input-group-btn>.btn {
+  padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
+  border-radius: 0.3rem;
 }
 
-/* Nav */
-.nav {
-  height: 50px;
-  padding: 10px;
-  background: #000;
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+}
+
+.btn-primary {
   color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  background-color: #5cb85c;
+  border-color: #5cb85c;
 }
 
-.nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-}
-
-.nav ul li a {
-  margin: 5px 15px;
+.pull-xs-right {
+  float: right!important;
 }
