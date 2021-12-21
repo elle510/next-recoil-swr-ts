@@ -24,6 +24,12 @@ const Nav: React.FC = () => {
             </li>
 
             <li className="nav-item">
+              <Link href="/todo" as="/todo">
+                Todo
+              </Link>
+            </li>
+
+            <li className="nav-item">
               <Link href="/" as="/">
                 Home
               </Link>
@@ -47,6 +53,12 @@ const Nav: React.FC = () => {
             <li className="nav-item">
               <Link href="/about" as="/about">
                 About
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link href="/todo" as="/todo">
+                Todo
               </Link>
             </li>
 
