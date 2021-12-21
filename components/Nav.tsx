@@ -18,6 +18,12 @@ const Nav: React.FC = () => {
         {!isLoggedIn && (
           <ul className="nav navbar-nav pull-xs-right">
             <li className="nav-item">
+              <Link href="/about" as="/about">
+                About
+              </Link>
+            </li>
+
+            <li className="nav-item">
               <Link href="/" as="/">
                 Home
               </Link>
@@ -38,6 +44,12 @@ const Nav: React.FC = () => {
         )}
         {isLoggedIn && (
           <ul className="nav navbar-nav pull-xs-right">
+            <li className="nav-item">
+              <Link href="/about" as="/about">
+                About
+              </Link>
+            </li>
+
             <li className="nav-item">
               <Link href="/" as="/">
                 Home

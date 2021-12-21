@@ -18,11 +18,11 @@ const ArticleList = () => {
   if (!data) return <div>loading...</div>;
 
   const { articles, articlesCount } = data;
-  console.log('articles', articles);
+  // console.log('articles', articles);
   return (
     <div>
       {articles?.map((article: any) => {
-        console.log('article', article);
+        // console.log('article', article);
         return <ArticlePreview key={article.slug} article={article} />;
       }) || <div>No</div>}
     </div>

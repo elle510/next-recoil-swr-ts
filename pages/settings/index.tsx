@@ -46,6 +46,7 @@ const Settings = ({ res }: any) => {
   );
 };
 
+// TODO: getInitialProps deprecated(?) 일텐데 리펙토링 하자
 Settings.getInitialProps = async ({ res }: any) => {
   return {
     res,
