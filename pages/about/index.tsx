@@ -46,14 +46,14 @@ const About = () => {
       <br />
 
       {/* Suspense 와 ErrorBoundary 는 loading 이나 에러메시지 표시를 원하는 컴포넌트를 감싸면 된다. */}
-      {/* ErrorBoundary 로 인해 에러가 렌더링 되면 children 인 UserInfo  */}
-      <React.Suspense fallback={<div>Loading...</div>}>
-        {/* <ErrorBoundary>
+      {/* ErrorBoundary 는 throw error 하는 컴포넌트를 깜싼다. */}
+      {/* ErrorBoundary 로 인해 에러가 렌더링 되면 children 인 UserInfo 는 렌더링이 안됨 */}
+      {/* <React.Suspense fallback={<div>Loading...</div>}>
+        <ErrorBoundary>
           <UserInfo />
-        </ErrorBoundary> */}
-        <UserInfo />
-      </React.Suspense>
-      {/* <UserInfo /> */}
+        </ErrorBoundary>
+      </React.Suspense> */}
+      <UserInfo />
       {userName}
       <button onClick={updateUserName}>set username</button>
       <br />

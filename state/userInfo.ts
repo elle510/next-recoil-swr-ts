@@ -16,8 +16,8 @@ export const currentUserProfileQuery = selector({
       console.log('after selector currentUserProfileQuery');
       return response.data;
     } catch (error) {
-      // throw error;
       console.log('Error', error);
+      throw error;
     }
 
     // const response = await myDBQuery({
